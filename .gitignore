@@ -1,0 +1,18 @@
+# Node
+node_modules/
+dist/
+build/
+
+# Rust
+target/
+Cargo.lock
+
+# Env
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
