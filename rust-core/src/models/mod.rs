@@ -1,3 +1,6 @@
+// Core data models shared across the engine.
+// Serialized with serde so they can cross the Tauri IPC boundary as JSON.
+
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 
