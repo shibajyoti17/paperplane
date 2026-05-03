@@ -1,0 +1,30 @@
+[package]
+name = "paperplane-core"
+version = "0.1.0"
+edition = "2021"
+description = "Core execution engine for Paperplane"
+
+[lib]
+name = "paperplane_core"
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "paperplane"
+path = "src/main.rs"
+
+[dependencies]
+tauri = { version = "2", features = ["macos-private-api"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true
