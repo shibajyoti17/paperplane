@@ -1,0 +1,28 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Paperplane",
+  "version": "0.1.0",
+  "identifier": "dev.paperplane.app",
+  "build": {
+    "frontendDist": "../apps/desktop/dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Paperplane",
+        "width": 1200,
+        "height": 800,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": []
+  }
+}
